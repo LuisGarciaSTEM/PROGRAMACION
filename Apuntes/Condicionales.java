@@ -16,12 +16,6 @@ public class Condicionales {
          */
         /* Solicita un número por teclado, y di si es positivo o negativo. */
 
-        if (args.length > 0) {
-            System.out.println("Hola " + args[0] + " es positivo");
-        } else {
-            System.out.println("Hola " + args[0] + " es negativo");
-        }
-
         System.out.println("Dime un número, para saber si es positivo o negativo.");
         int pedirNumero = sc.nextInt();
 
@@ -40,5 +34,20 @@ public class Condicionales {
             System.out.println("La palabra " + palabra + " != a");
         }
 
+        if (args.length > 1) {
+            System.out.println("No puedes mas de un argumento.");
+        } else {
+            if (args.length == 0) {
+                numero = sc.nextInt();
+
+                numero = Integer.parseInt(args[0]);
+                if (numero < 0) {
+                    System.out.println("El número es: " + numero + " y es negativo");
+                } else {
+                    System.out.println("El número es: " + numero + " y es positivo");
+                }
+
+            }
+        }
     }
 }
