@@ -90,32 +90,34 @@ public class EjerciciosBasicosPrimeraSemana {
          * 
          * }
          */
-
-        System.out.println("Di un día de la semana.");
-        pedirNombre = sc.nextLine();
-
-        switch (pedirNombre) {
-            case "Lunes":
-                System.out.println("Es el día 1");
-                break;
-            case "Martes":
-                System.out.println("Es el día 2");
-                break;
-            case "Miercoles":
-                System.out.println("Es el día 3");
-                break;
-            case "Jueves":
-                System.out.println("Es el día 4");
-                break;
-            case "Viernes":
-                System.out.println("Es el día 5");
-                break;
-            case "Sabado":
-                System.out.println("Es el día 6");
-                break;
-            default:
-                System.out.println("Mal, otro día de la semana.");
-                break;
-        }
+        /*
+         * System.out.println("Di un día de la semana.");
+         * pedirNombre = sc.nextLine();
+         * 
+         * switch (pedirNombre) {
+         * case "Lunes":
+         * System.out.println("Es el día 1");
+         * break;
+         * case "Martes":
+         * System.out.println("Es el día 2");
+         * break;
+         * case "Miercoles":
+         * System.out.println("Es el día 3");
+         * break;
+         * case "Jueves":
+         * System.out.println("Es el día 4");
+         * break;
+         * case "Viernes":
+         * System.out.println("Es el día 5");
+         * break;
+         * case "Sabado":
+         * System.out.println("Es el día 6");
+         * break;
+         * default:
+         * System.out.println("Mal, otro día de la semana.");
+         * break;
+         * 
+         * }
+         */
     }
 }
