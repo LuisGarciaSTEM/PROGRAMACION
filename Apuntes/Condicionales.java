@@ -15,25 +15,28 @@ public class Condicionales {
          * }
          */
         /* Solicita un número por teclado, y di si es positivo o negativo. */
+        /*
+         * System.out.println("Dime un número, para saber si es positivo o negativo.");
+         * int pedirNumero = sc.nextInt();
+         * 
+         * if (pedirNumero < 0) {
+         * System.out.println("El número es: " + pedirNumero + " y es negativo");
+         * } else {
+         * System.out.println("El número es: " + pedirNumero + " y es positivo");
+         * }
+         */
+        /*
+         * sc.nextLine(); // Coge el salto de linea que ha dejado nextInt
+         * System.out.println("Dime un palabra, y la repito.");
+         * palabra = sc.nextLine();
+         * if (palabra.equals("caca")) {
+         * System.out.println("La palabra " + palabra + " = a");
+         * } else {
+         * System.out.println("La palabra " + palabra + " != a");
+         * }
+         */
 
-        System.out.println("Dime un número, para saber si es positivo o negativo.");
-        int pedirNumero = sc.nextInt();
-
-        if (pedirNumero < 0) {
-            System.out.println("El número es: " + pedirNumero + " y es negativo");
-        } else {
-            System.out.println("El número es: " + pedirNumero + " y es positivo");
-        }
-
-        sc.nextLine(); // Coge el salto de linea que ha dejado nextInt
-        System.out.println("Dime un palabra, y la repito.");
-        palabra = sc.nextLine();
-        if (palabra.equals("caca")) {
-            System.out.println("La palabra " + palabra + " = a");
-        } else {
-            System.out.println("La palabra " + palabra + " != a");
-        }
-
+         /* 
         if (args.length != 1) {
             System.out.println("Debe proporcionar un único argumento.");
         } else {
@@ -48,5 +51,6 @@ public class Condicionales {
             }
 
         }
+        */
     }
 }
