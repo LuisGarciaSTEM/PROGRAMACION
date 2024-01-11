@@ -7,6 +7,14 @@ public class Ejercicios {
         Scanner sc = new Scanner(System.in);
         int pedirNum;
         int pedirNum2;
+        int num1;
+        int num2;
+        int suma;
+        int multiplicacion;
+        int division;
+        int resta;
+        String operacion;
+
         /*
          * 1.- Condición básica.
          * Crea una variable y dale un valor.
@@ -76,30 +84,76 @@ public class Ejercicios {
          * Gestiona que realemente introduce dos argumentos, ni más ni menos.
          * Hay que imprimir por pantalla el número que sea mayor. Gestiona para que, si
          * el número de argumentos es incorrectos, los solicite desde teclado.
+         * 
+         * 
+         * if (args.length == 2) {
+         * int num1 = Integer.parseInt(args[0]);
+         * int num2 = Integer.parseInt(args[1]);
+         * 
+         * if (num1 > num2)
+         * System.out.println("El número " + num1 + " es mayor que " + num2);
+         * else if (num1 < num2)
+         * System.out.println("El número " + num2 + " es mayor que " + num1);
+         * else
+         * System.out.println("Los números son iguales. Son el: " + num1);
+         * } else {
+         * System.out.
+         * println("Introduce 2 números separados por un espacio para saber cuál es el mayor: "
+         * );
+         * pedirNum = sc.nextInt();
+         * pedirNum2 = sc.nextInt();
+         * 
+         * if (pedirNum > pedirNum2)
+         * System.out.println("El número " + pedirNum + " es mayor que " + pedirNum2);
+         * else if (pedirNum < pedirNum2)
+         * System.out.println("El número " + pedirNum2 + " es mayor que " + pedirNum);
+         * else
+         * System.out.println("Los números son iguales. Son el: " + pedirNum);
+         * }
          */
+        /*
+         * 5.- Calculadora en Switch.
+         * Solicita por teclado dos números y la palabra operación (suma, resta,
+         * multiplicación, división). El programa debe realizar la operación
+         * correspondiente. Modifícalo para que pueda funcionar tanto los datos
+         * introducidos por teclado como introduciendole argumentos al main.
+         */
+        System.out.println("Dime el primer número: ");
+        num1 = sc.nextInt();
 
-        if (args.length == 2) {
-            int num1 = Integer.parseInt(args[0]);
-            int num2 = Integer.parseInt(args[1]);
+        System.out.println("Dime el segundo número: ");
+        num2 = sc.nextInt();
 
-            if (num1 > num2)
-                System.out.println("El número " + num1 + " es mayor que " + num2);
-            else if (num1 < num2)
-                System.out.println("El número " + num2 + " es mayor que " + num1);
-            else
-                System.out.println("Los números son iguales. Son el: " + num1);
-        } else {
-            System.out.println("Introduce 2 números separados por un espacio para saber cuál es el mayor: ");
-            pedirNum = sc.nextInt();
-            pedirNum2 = sc.nextInt();
+        sc.nextLine(); // Limpia el buffer de entrada
 
-            if (pedirNum > pedirNum2)
-                System.out.println("El número " + pedirNum + " es mayor que " + pedirNum2);
-            else if (pedirNum < pedirNum2)
-                System.out.println("El número " + pedirNum2 + " es mayor que " + pedirNum);
-            else
-                System.out.println("Los números son iguales. Son el: " + pedirNum);
+        System.out.println("Dime la operación que quieres realizar: ");
+        operacion = sc.nextLine().toLowerCase();
+        switch (operacion) {
+            case "suma":
+                suma = num1 + num2;
+                System.out.println("El resultado de la suma es: " + suma);
+                break;
+
+            case "resta":
+                resta = num1 - num2;
+                System.out.println("El resultado de la resta es: " + resta);
+                break;
+
+            case "division":
+                division = num1 / num2;
+                System.out.println("El resultado de la division es: " + division);
+                break;
+
+            case "multiplicacion":
+                multiplicacion = num1 * num2;
+                System.out.println("El resultado de la mutiplicación es: " + multiplicacion);
+                break;
+
+            default:
+                System.out.println("Has introducido otra cosa, mira bien lo que has escrito.");
+                break;
         }
+
     }
 
 }
