@@ -124,7 +124,7 @@ public class Ejercicios {
         System.out.println("Dime el segundo número: ");
         num2 = sc.nextInt();
 
-        sc.nextLine(); // Limpia el buffer de entrada
+        sc.nextLine(); // Limpiar el buffer de entrada
 
         System.out.println("Dime la operación que quieres realizar: ");
         operacion = sc.nextLine().toLowerCase();
