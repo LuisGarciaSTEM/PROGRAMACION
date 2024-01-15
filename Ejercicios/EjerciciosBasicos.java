@@ -17,6 +17,6 @@ public class EjerciciosBasicos {
             } else {
                 System.out.println("El número " + numero + " NOO está comprendido dentro de " + min + " y " + max);
             }
-        } 
+        }
     }
 }

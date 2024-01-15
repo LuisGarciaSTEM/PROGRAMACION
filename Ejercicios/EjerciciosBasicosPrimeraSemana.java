@@ -119,5 +119,9 @@ public class EjerciciosBasicosPrimeraSemana {
          * 
          * }
          */
+
+        /*- Numero natural: Solicita un número, si es menor que 0 imprime que no es un número natural. 
+            */
+
     }
 }
