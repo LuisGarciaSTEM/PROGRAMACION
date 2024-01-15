@@ -58,6 +58,21 @@ public class EjerciciosCondicionalesBasicos {
          * }
          */
 
-         
+        /*
+         * Pasar a par: Solicita un número par, si el número introducido es impar súmale
+         * uno.
+         * 
+         * 
+         * System.out.println("Dime un número par: ");
+         * numero = sc.nextInt();
+         * 
+         * if (numero % 2 == 0) {
+         * System.out.println("El número es par!");
+         * } else {
+         * System.out.println("Es impar! Número final: ");
+         * System.out.println( numero + 1);
+         * }
+         */
+
     }
 }
