@@ -62,7 +62,6 @@ public class EjerciciosCondicionalesBasicos {
          * Pasar a par: Solicita un número par, si el número introducido es impar súmale
          * uno.
          * 
-         * 
          * System.out.println("Dime un número par: ");
          * numero = sc.nextInt();
          * 
@@ -74,5 +73,16 @@ public class EjerciciosCondicionalesBasicos {
          * }
          */
 
+        // Positivo: Solicita un número positivo, si el número introducido no es un
+        // número positivo lanza un mensaje de error.
+        System.out.println("Dime un número positivo: ");
+        numero = sc.nextInt();
+        if (numero > 0) {
+            System.out.println("El número " + numero + " es positivo!! ");
+        } else {
+            System.out.println("¡¡ ERROR !! El número " + numero + " NO es positivo!! ");
+        }
+        
+        
     }
 }
