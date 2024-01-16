@@ -126,5 +126,28 @@ public class EjerciciosCondicionalesBasicos {
         // Vocal: Solicita una vocal, si dato introducido no es una vocal, lanza un
         // mensaje de error. [!] Ascii.
 
+        System.out.println("Dime una letra para saber si es vocal. ");
+        char vocal = sc.next().toLowerCase().charAt(0);
+
+        // Verificar si el carácter introducido es una vocal (usando valores ASCII)
+        if ((vocal >= 'a' && vocal <= 'e')
+                || (vocal >= 'i' && vocal <= 'o')
+                || (vocal >= 'u' && vocal <= 'u')) {
+            System.out.println("¡Excelente! Has introducido la vocal: " + vocal);
+        } else {
+            System.out.println("¡Error! El carácter introducido no es una vocal.");
+        }
+
+        // Mayúscula: Solicita una letra mayúscula, si dato introducido no es una letra
+        // mayúscula, lanza un mensaje de error
+        System.out.println("Introduce una letra mayúscula: ");
+        char letraMayuscula = sc.next().charAt(0);
+
+        if (letraMayuscula >= 'A' && letraMayuscula <= 'Z') {
+            System.out.println("¡Excelente! Has introducido la letra mayúscula: " + letraMayuscula);
+        } else {
+            System.out.println("¡Error! El carácter introducido no es una letra mayúscula.");
+        }
+
     }
 }
