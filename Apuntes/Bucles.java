@@ -3,10 +3,10 @@ import java.util.Scanner;
 public class Bucles {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String palabra;
+        String palabra = "";
         int numero;
-        boolean salir = true;
-
+        boolean salir = false;
+        
         // For each -> for color in listaColores
         String[] listaAzules = { "Azul", "Añil", "Indigo", "Cobalto", "Klein" };
         for (String azul : listaAzules) {
@@ -41,15 +41,24 @@ public class Bucles {
             numero = sc.nextInt();
         } while (numero < 1 || numero > 50);
 
-
-        System.out.println("Bucle while");
+        // Bucle while sin refactorizar
+        // System.out.println("Bucle while");
+        
         while (!salir) {
             System.out.println("Escribe salir: ");
             palabra = sc.nextLine();
             if (palabra.equals("salir")) {
                 salir = true;
             }
-        }
+        } 
 
+        // Si tenemos un bucle con un if dentro que se encarga de comprobar la condicion
+        // de salida, normalmente podremos poner directamente esa condicion en el bucle.
+        // Bucle while REFACTORIZADO
+        System.out.println("Bucle while");
+        while (!palabra.equals("salir")) {
+            System.out.println("Escribe salir: ");
+            palabra = sc.nextLine();
+        }
     }
 }
