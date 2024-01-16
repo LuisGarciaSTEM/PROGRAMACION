@@ -6,7 +6,7 @@ public class EjerciciosCondicionalesBasicos {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        int min = 0, max = 100, numero;
+        int min = 0, max = 120, numero;
 
         /*
          * Numero natural: Solicita un número, si es menor que 0 imprime que no es un
@@ -110,6 +110,21 @@ public class EjerciciosCondicionalesBasicos {
         } else {
             System.out.println("¡¡ ERROR !! El número NO ESTÁ entre:" + min + max + " !!");
         }
+
+        // Rango de edad: Solicita una edad y asegúrate de que está comprendida entre 0
+        // y 120 años, si el número introducido no cumple la condición, lanza un mensaje
+        // de error.
+
+        System.out.println("Dime un número: ");
+        numero = sc.nextInt();
+        if (numero > 0 && numero < 120) {
+            System.out.println("El número " + numero + " está dentro del rango!! ");
+        } else {
+            System.out.println("¡¡ ERROR !! El número NO ESTÁ entre:" + min + max + " !!");
+        }
+
+        // Vocal: Solicita una vocal, si dato introducido no es una vocal, lanza un
+        // mensaje de error. [!] Ascii.
 
     }
 }
