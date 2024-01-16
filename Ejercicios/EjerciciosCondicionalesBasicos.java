@@ -96,5 +96,20 @@ public class EjerciciosCondicionalesBasicos {
             System.out.println("Número final (convertido a positivo): " + numero);
         }
 
+        // Comprendido entre: Solicita una número y asegúrate de que está comprendida
+        // entre otros dos números introducidos, si el número introducido no cumple la
+        // condición, lanza un mensaje de error.
+
+        System.out.println("Dime un número: ");
+        numero = sc.nextInt();
+        System.out.println("Dime 2 número para saber si el otro esta dentro de los rangos.");
+        min = sc.nextInt();
+        max = sc.nextInt();
+        if (numero >= min && numero <= max) {
+            System.out.println("El número " + numero + " está dentro del rango!! ");
+        } else {
+            System.out.println("¡¡ ERROR !! El número NO ESTÁ entre:" + min + max + " !!");
+        }
+
     }
 }
