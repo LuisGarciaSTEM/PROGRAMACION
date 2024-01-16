@@ -82,7 +82,19 @@ public class EjerciciosCondicionalesBasicos {
         } else {
             System.out.println("¡¡ ERROR !! El número " + numero + " NO es positivo!! ");
         }
-        
-        
+
+        // Pasar a positivo: Solicita un número positivo, si el número introducido es
+        // negativo pásalo a positivo.
+
+        System.out.println("Dime un número positivo: ");
+        numero = sc.nextInt();
+        if (numero > 0) {
+            System.out.println("El número " + numero + " es positivo!! ");
+        } else {
+            System.out.println("¡¡ ERROR !! El número NO es positivo!!");
+            numero = numero * -1;
+            System.out.println("Número final (convertido a positivo): " + numero);
+        }
+
     }
 }
