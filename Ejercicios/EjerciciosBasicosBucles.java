@@ -15,7 +15,7 @@ public class EjerciciosBasicosBucles {
             num = sc.nextInt();
         } while (num <= 0);
 
-        System.out.println("Corrrecto, " + num + " es un número positivo.");
+        System.out.println("Corrrecto, " + num + " es un número natural positivo.");
 
         // Hora: Solicita una hora (hora,minutos,segundos) en una única línea, separada
         // por espacios. Si los datos son incorrectos, vuelve a solicitar los datos.
@@ -45,6 +45,16 @@ public class EjerciciosBasicosBucles {
         } while (!(par % 2 == 0));
 
         System.out.println("El número " + par + " es par, bien hecho.");
+
+        // Positivo: Solicita un número positivo, si el número introducido no es un
+        // número positivo vuelve a solicitar el número.
+
+        do {
+            System.out.println("Dime un número POSITIVO (mayor que 0): ");
+            num = sc.nextInt();
+        } while (num <= 0);
+
+        System.out.println("Corrrecto, " + num + " es un número positivo.");
 
     }
 }
