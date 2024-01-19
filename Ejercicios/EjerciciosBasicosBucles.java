@@ -42,7 +42,7 @@ public class EjerciciosBasicosBucles {
         do {
             System.out.print("Dime un número par: ");
             par = sc.nextInt();
-
+                
         } while (!(par % 2 == 0));
 
         System.out.println("El número " + par + " es par, bien hecho.");
