@@ -63,7 +63,7 @@ public class EjerciciosBasicosBucles {
         // la letra.
 
         do {
-            System.out.print("Ingrese una letra mayúscula: ");
+            System.out.print("Ingrese una letra MAYUSCULA: ");
             letra = sc.next().charAt(0);
 
             if (Character.isLowerCase(letra)) {
@@ -78,6 +78,7 @@ public class EjerciciosBasicosBucles {
         } while (!Character.isUpperCase(letra));
 
         System.out.println("Correcto, ingresaste la letra mayúscula: " + letra);
+
     }
 
 }
