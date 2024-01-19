@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class EjerciciosBasicosBucles {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int num, hora, minutos, segundos;
+        int num, hora, minutos, segundos, par;
 
         // Numero natural: Solicita un número hasta que te introduzcan un número natural
         // (positivo)
@@ -34,6 +34,17 @@ public class EjerciciosBasicosBucles {
         } while (!((hora >= 0 && hora < 24) && (minutos >= 0 && minutos < 60) && (segundos >= 0 && segundos < 60)));
 
         System.out.println("Hora ingresada: " + hora + ":" + minutos + ":" + segundos);
+
+        // Par: Solicita un número PAR, si el número introducido no es un número par
+        // vuelve a solicitar el número.
+
+        do {
+            System.out.print("Dime un número par: ");
+            par = sc.nextInt();
+
+        } while (!(par % 2 == 0));
+
+        System.out.println("El número " + par + " es par, bien hecho.");
 
     }
 }
