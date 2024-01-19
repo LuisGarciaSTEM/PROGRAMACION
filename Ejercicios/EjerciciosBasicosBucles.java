@@ -6,6 +6,7 @@ public class EjerciciosBasicosBucles {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int num, hora, minutos, segundos, par;
+        char letra;
 
         // Numero natural: Solicita un número hasta que te introduzcan un número natural
         // (positivo)
@@ -56,5 +57,27 @@ public class EjerciciosBasicosBucles {
 
         System.out.println("Corrrecto, " + num + " es un número positivo.");
 
+        // Pasar a mayúscula: Solicita una letra mayúscula, si dato introducido no es
+        // una letra mayúscula, pero si una letra minúscula, pasalá a mayúscula. En caso
+        // de no ser ni una letra mayúscula ni una letra minúscula, vuelve a solicitar
+        // la letra.
+
+        do {
+            System.out.print("Ingrese una letra mayúscula: ");
+            letra = sc.next().charAt(0);
+
+            if (Character.isLowerCase(letra)) {
+                // Si es una letra minúscula, conviértela a mayúscula
+                letra = Character.toUpperCase(letra);
+                System.out.println("La letra ingresada era minúscula. Convertida a mayúscula: " + letra);
+            } else if (!Character.isUpperCase(letra)) {
+                // Si no es una letra mayúscula ni minúscula, muestra un mensaje de error
+                System.out.println("Error: Ingresa una letra mayúscula o minúscula válida.");
+            }
+
+        } while (!Character.isUpperCase(letra));
+
+        System.out.println("Correcto, ingresaste la letra mayúscula: " + letra);
     }
+
 }
