@@ -64,5 +64,13 @@ public class AprenderArrays {
         // ARRAYs DINAMICAS (LISTA)
         // Creación de arrays estáticas.
         ArrayList<String> arrayColores = new ArrayList<String>();
+        arrayColores.add("Azul");
+        arrayColores.add("Amarrilo");
+        arrayColores.add("Rojo");
+        arrayColores.add("Verde");
+        arrayColores.add("Blanco");
+
+        System.out.println("Imprimo el arrayList de colores: ");
+        System.out.println(arrayColores);
     }
 }
