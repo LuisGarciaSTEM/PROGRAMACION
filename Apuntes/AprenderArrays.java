@@ -1,5 +1,7 @@
+import java.util.ArrayList; 
+
 public class AprenderArrays {
-    // Sobrecarga de funciones: podemos tener funciones con el mismo nombre y 
+    // Sobrecarga de funciones: podemos tener funciones con el mismo nombre y
     // funcionalidad siemrpre y cuando los atributos de entrada sean distintos. Para
     // poder cambiar los tipos de datos, pero mantener la funcionalidad
     public static void imprimirArray(String[] lista) {
@@ -7,8 +9,15 @@ public class AprenderArrays {
             System.out.println(elemento);
         }
     }
+
     public static void imprimirArray(int[] lista) {
         for (int elemento : lista) {
+            System.out.println(elemento);
+        }
+    }
+
+    public static void imprimirArray(char[] lista) {
+        for (char elemento : lista) {
             System.out.println(elemento);
         }
     }
@@ -47,10 +56,13 @@ public class AprenderArrays {
         System.out.println("El color en la primera posición es: " + color);
 
         System.out.println("Imprimo números: ");
-        imprimirArray(numeros);
+        imprimirArray(numeros); // Por defecto, son 0s.
+
+        System.out.println("Imprimo letras: ");
+        imprimirArray(letras); // Por defencto son espacios en blanco.
 
         // ARRAYs DINAMICAS (LISTA)
         // Creación de arrays estáticas.
-
+        ArrayList<String> arrayColores = new ArrayList<String>();
     }
 }
