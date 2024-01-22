@@ -1,3 +1,4 @@
+import java.lang.reflect.Array;
 import java.util.ArrayList; 
 
 public class AprenderArrays {
@@ -64,6 +65,7 @@ public class AprenderArrays {
         // ARRAYs DINAMICAS (LISTA)
         // Creación de arrays estáticas.
         ArrayList<String> arrayColores = new ArrayList<String>();
+        ArrayList<String> arrayColores2 = arrayColores;
         arrayColores.add("Azul");
         arrayColores.add("Amarrilo");
         arrayColores.add("Rojo");
@@ -72,5 +74,12 @@ public class AprenderArrays {
 
         System.out.println("Imprimo el arrayList de colores: ");
         System.out.println(arrayColores);
+
+        System.out.println("Imprimo arryList de Colores2:" );
+        System.out.println(arrayColores2);
+
+        // Mostrar o recoger un valor del arraList:
+       
+        System.out.println( Array.get(arrayColores2, 0));
     }
 }
