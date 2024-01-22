@@ -6,6 +6,7 @@ public class EjerciciosBasicosBucles {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int num, hora, minutos, segundos, par;
+        int pedirNum, numMin, numMax;
         char letra;
 
         // Numero natural: Solicita un número hasta que te introduzcan un número natural
@@ -42,7 +43,7 @@ public class EjerciciosBasicosBucles {
         do {
             System.out.print("Dime un número par: ");
             par = sc.nextInt();
-                
+
         } while (!(par % 2 == 0));
 
         System.out.println("El número " + par + " es par, bien hecho.");
@@ -56,6 +57,19 @@ public class EjerciciosBasicosBucles {
         } while (num <= 0);
 
         System.out.println("Corrrecto, " + num + " es un número positivo.");
+
+        // Comprendido entre: Solicita una número y asegúrate de que está comprendida
+        // entre otros dos números (min y max) introducidos, si el número introducido no
+        // cumple la condición, vuelve a solicitar el número.
+
+        do {
+            System.out.println("Dime un número: ");
+            num = sc.nextInt();
+            System.out.println("Y ahora dime, los números en los que está comprendido "
+                    + "para saber si es correcto: ");
+            numMin = sc.nextInt();
+            numMax = sc.nextInt();
+        } while (num < numMin && num > numMax);
 
         // Pasar a mayúscula: Solicita una letra mayúscula, si dato introducido no es
         // una letra mayúscula, pero si una letra minúscula, pasalá a mayúscula. En caso
