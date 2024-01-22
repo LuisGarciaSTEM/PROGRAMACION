@@ -79,7 +79,9 @@ public class AprenderArrays {
         System.out.println(arrayColores2);
 
         // Mostrar o recoger un valor del arraList:
-       
-        System.out.println( Array.get(arrayColores2, 0));
+        color = arrayColores.get(0);
+        System.out.println("El color de la posicion 0 = " + color);
+
+        
     }
 }
