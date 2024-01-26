@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class App {
@@ -8,38 +9,61 @@ public class App {
 
     public static void main(String[] args) throws Exception {
         Scanner sc = new Scanner(System.in);
-        int pedirNum; 
-        String pedirFrase;
+        ArrayList<String> arrayPalabras = new ArrayList<String>();
+        int pedirNum;
+        String pedirFrase, palabraSeparada, palabra;
         // Dígito: Solicita un dígito, si dato introducido no es un dígito, vuelve a
         // solicitar un dígito.
-        
-        /* 
-        do {
-            System.out.println("Dime un número: ");
-            while (!sc.hasNextInt()) {
-                System.out.println("Por favor, ingresa un número entero.");
-                sc.next(); // Consumir el input no válido
-            }
-
-            // Asignar el valor ingresado por el usuario a la variable pedirNum
-            pedirNum = sc.nextInt();
-
-        } while (!esDigito(pedirNum));
-
-        System.out.println("Has introducido un número: " + pedirNum);
-        */
 
         /*
-        // Eco: Solicita palabras por teclado y repitelas hasta que el usuario escriba
-        // SALIR.
-        do {
-            System.out.println("Dime la contraseña correcta: ");
-            pedirFrase = sc.nextLine();
-        } while (!pedirFrase.toLowerCase().equals("salir"));
+         * do {
+         * System.out.println("Dime un número: ");
+         * while (!sc.hasNextInt()) {
+         * System.out.println("Por favor, ingresa un número entero.");
+         * sc.next(); // Consumir el input no válido
+         * }
+         * 
+         * // Asignar el valor ingresado por el usuario a la variable pedirNum
+         * pedirNum = sc.nextInt();
+         * 
+         * } while (!esDigito(pedirNum));
+         * 
+         * System.out.println("Has introducido un número: " + pedirNum);
+         */
 
-        System.out.println("Correcto has adivinado la contraseña."); 
-        */
+        /*
+         * // Eco: Solicita palabras por teclado y repitelas hasta que el usuario
+         * escriba SALIR.
+         * 
+         * System.out.println("Introduce palabras hasta salir: ");
+         * palabra = sc.nextLine();
+         * 
+         * while(!palabra.toLowerCase().equals("salir")){
+         * arrayPalabras.add(palabra);
+         * System.out.println("Introduce palabras hasta salir: ");
+         * System.out.println(arrayPalabras);
+         * palabra = sc.nextLine();
+         * }
+         * 
+         * System.out.println("Has construido la lista: " + arrayPalabras);
+         */
 
-        
+        // Eco con -: Solicita palabras por teclado y repitelas separando cada una de
+        // las letras con giones hasta que el usuario escriba SALIR.
+
+        System.out.println("Introduce palabras hasta salir: ");
+        palabra = sc.nextLine();
+
+        while (!palabra.toLowerCase().equals("salir")) {
+            arrayPalabras.add(palabra);
+            System.out.println("Introduce palabras hasta salir: ");
+            System.out.println(arrayPalabras);
+            for (String letra : arrayPalabras) {
+                System.out.println(letra + "-");
+            }
+            palabra = sc.nextLine();
+        }
+
+        System.out.println("Has construido la lista: " + arrayPalabras);
     }
 }
