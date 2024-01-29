@@ -17,7 +17,7 @@ public class Circulo {
 
     // Constructor(int radio, String color) -> Con parámetros.
     public Circulo(int radio, String color) {
-        this.radio = radio;
+        this.setRadio(radio);
         this.color = color;
     }
 
@@ -39,6 +39,9 @@ public class Circulo {
     // Set -> Establecer la informacion a los atributos.
     public void setRadio(int radio) {
         this.radio = radio;
+        if (radio < 1) {
+            this.radio = 1;
+        }
     }
 
     public void setColor(String color) {
