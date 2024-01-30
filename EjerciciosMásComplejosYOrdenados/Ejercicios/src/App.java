@@ -156,5 +156,12 @@ public class App {
         // Numeros impares: Dado un número, escribe los números impares comprendidos
         // entre el 1 y él.
 
+        System.out.println("Dime un número, y escribo los números impares comprendidos entre el 1 y él.");
+        pedirNum = sc.nextInt();
+
+        for (int i = 1; i < pedirNum; i++) {
+            
+        }
+
     }
 }
