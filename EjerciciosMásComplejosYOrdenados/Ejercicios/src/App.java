@@ -93,9 +93,15 @@ public class App {
 
         /*
          * // Del 1 al 100: Escribe los números del 1 al 100.
-         * for (int i = 0; i < 100 + 1; i++) {
+         * for (int i = 0; i <= 100; i++) {
          * System.out.println(i);
          * }
          */
+
+        // Del 100 al 1: Escribe los números del 100 al 1.
+        for (int i = 100; i > 0; i--) {
+            System.out.println(i);
+        }
+
     }
 }
