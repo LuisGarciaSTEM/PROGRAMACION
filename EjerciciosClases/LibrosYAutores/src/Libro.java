@@ -1,3 +1,5 @@
+import javax.security.auth.kerberos.KerberosCredMessage;
+
 public class Libro {
 
     private String titulo;
@@ -29,10 +31,10 @@ public class Libro {
      * @param numPagina El número de páginas del libro.
      */
     public Libro(String titulo, String autor, int ISBN, int numPagina) {
-        this.titulo = titulo;
-        this.autor = autor;
+        this.setTitulo(titulo);
+        this.setAutor(autor);
         this.ISBN = ISBN;
-        this.numPagina = numPagina;
+        this.setNumPaginas(numPagina);
     }
 
     /**
@@ -77,7 +79,11 @@ public class Libro {
      * @param Titulo El núevo Titulo del libro.
      */
     public void setTitulo(String titulo) {
-        this.titulo = titulo;
+        if (titulo.length() > 20) {
+            this.titulo = titulo.substring(0, 20);
+        } else {
+            this.titulo = titulo;
+        }
     }
 
     /**
@@ -85,8 +91,12 @@ public class Libro {
      * 
      * @param autor El núevo autor del libro.
      */
-    public void setAuthor(String autor) {
-        this.autor = autor;
+    public void setAutor(String autor) {
+        if (autor.length() > 20) {
+            this.autor = autor.substring(0, 20);
+        } else {
+            this.autor = autor;
+        }
     }
 
     /**
@@ -95,7 +105,11 @@ public class Libro {
      * @param numPaginas El núevo numPaginas del libro.
      */
     public void setNumPaginas(int numPagina) {
-        this.numPagina = numPagina;
+        if (numPagina < 0) {
+            this.numPagina = 0;
+        } else {
+            this.numPagina = numPagina;
+        }
     }
 
     /**
@@ -115,9 +129,12 @@ public class Libro {
         Libro libro1 = new Libro("Las temopilas", 123456789);
         Libro libro2 = new Libro("Juego de tronos", "R.R.Martin",
                 987654321, 600);
+        Libro libro3 = new Libro("123456789012345678901234567890", "123456789012345678901234567890",
+                23, 57);
 
         System.out.println("Libro 1 ->" + libro1);
         System.out.println("Libro 2 ->" + libro2);
+        System.out.println("Libro 3 ->" + libro3);
 
         /**
          * El número de páginas introducidas no puede ser menor que 0.
