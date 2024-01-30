@@ -36,15 +36,51 @@ public class Libro {
     }
 
     /**
+     * Obtener el Titulo actual del Libro.
+     * 
+     * @return El Titulo del Libro.
+     */
+    public String getTitulo() {
+        return this.titulo;
+    }
+
+    /**
+     * Obtener el Autor actual del Libro.
+     * 
+     * @return El Autor del Libro.
+     */
+    public String getAutor() {
+        return this.autor;
+    }
+
+    /**
+     * Obtener el ISBN actual del Libro.
+     * 
+     * @return El ISBN del Libro.
+     */
+    public int getISBN() {
+        return this.ISBN;
+    }
+
+    /**
+     * Obtener el numPagina actual del Libro.
+     * 
+     * @return El numPagina del Libro.
+     */
+    public int getNumPagina() {
+        return this.numPagina;
+    }
+
+    /**
      * Devolver la representación en formato cadena (String) del objeto Libro.
      * 
-     * @return Una cadena que representar el objeto círculo.
+     * @return Una cadena que representar el objeto Libro.
      */
     @Override
     public String toString() {
 
-        return " el libro " + this.titulo + ", de " + this.autor + ", con ISBN" + this.ISBN + ". Tiene " + this.numPagina
-                + " páginas";
+        return " el libro " + this.titulo + ", de " + this.autor + ", con ISBN" + this.ISBN + ". Tiene "
+                + this.numPagina + " páginas";
     }
 
     public static void main(String[] args) {
