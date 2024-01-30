@@ -53,7 +53,7 @@ public class App {
 
         System.out.println("Introduce palabras hasta salir: ");
         palabra = sc.nextLine();
-
+            
         while (!palabra.toLowerCase().equals("salir")) {
             arrayPalabras.add(palabra);
             System.out.println("Introduce palabras hasta salir: ");

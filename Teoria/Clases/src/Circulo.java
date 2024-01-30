@@ -1,5 +1,11 @@
 import java.util.Scanner;
 
+
+/* ESTAMOS EN LA CLASE CIRCULO  */
+
+// Hacemos el comentario con doble //
+/* Hacemos el comentario con */
+
 public class Circulo {
 
     // Atributos de la clase, en este caso (circulo).
