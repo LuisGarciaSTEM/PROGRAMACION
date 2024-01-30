@@ -78,17 +78,24 @@ public class App {
          * }
          */
 
-        
-        // Eco X veces: Solicita una palabra y un número y que el programa repita la
-        // palabra ese número de veces.
-        System.out.println("Dime una palabra/frase.");
-        pedirFrase = sc.nextLine();
-        System.out.println("Ahora dime cuantas veces quieres que se repita eso: ");
-        pedirNum = sc.nextInt();
+        /*
+         * // Eco X veces: Solicita una palabra y un número y que el programa repita la
+         * // palabra ese número de veces.
+         * System.out.println("Dime una palabra/frase.");
+         * pedirFrase = sc.nextLine();
+         * System.out.println("Ahora dime cuantas veces quieres que se repita eso: ");
+         * pedirNum = sc.nextInt();
+         * 
+         * for (int i = 0; i < pedirNum; i++) {
+         * System.out.println(pedirFrase);
+         * }
+         */
 
-        for (int i = 0; i < pedirNum; i++) {
-            System.out.println(pedirFrase);
-        }
-
+        /*
+         * // Del 1 al 100: Escribe los números del 1 al 100.
+         * for (int i = 0; i < 100 + 1; i++) {
+         * System.out.println(i);
+         * }
+         */
     }
 }
