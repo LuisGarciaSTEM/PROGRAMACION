@@ -14,7 +14,7 @@ public class Libro {
      */
     public Libro(String titulo, int ISBN) {
         this.titulo = titulo;
-        this.autor = "";
+        this.autor = "(por defecto)";
         this.ISBN = ISBN;
         this.numPagina = 0;
     }
@@ -35,7 +35,25 @@ public class Libro {
         this.numPagina = numPagina;
     }
 
+    /**
+     * Devolver la representación en formato cadena (String) del objeto Libro.
+     * 
+     * @return Una cadena que representar el objeto círculo.
+     */
+    @Override
+    public String toString() {
+
+        return " el libro " + this.titulo + ", de " + this.autor + ", con ISBN" + this.ISBN + ". Tiene " + this.numPagina
+                + " páginas";
+    }
+
     public static void main(String[] args) {
         System.out.println("Hello, World!");
+        Libro libro1 = new Libro("Las temopilas", 123456789);
+        Libro libro2 = new Libro("Juego de tronos", "R.R.Martin",
+                987654321, 600);
+
+        System.out.println("Libro 1 ->" + libro1);
+        System.out.println("Libro 2 ->" + libro2);
     }
 }
