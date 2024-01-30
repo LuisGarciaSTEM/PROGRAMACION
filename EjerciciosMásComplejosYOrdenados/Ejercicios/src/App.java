@@ -111,5 +111,18 @@ public class App {
          * System.out.println(i);
          * }
          */
+
+        /*
+         * // Del 1 a X: Solicita un número y escribe los números desde el 1 a ese
+         * número.
+         * System.out.println("Dime un número y escribo los números hasta ese número.");
+         * pedirNum = sc.nextInt();
+         * 
+         * for (int i = 0; i <= pedirNum; i++) {
+         * System.out.println(i);
+         * }
+         */
+
+         
     }
 }
