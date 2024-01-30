@@ -98,10 +98,12 @@ public class App {
          * }
          */
 
-        // Del 100 al 1: Escribe los números del 100 al 1.
-        for (int i = 100; i > 0; i--) {
-            System.out.println(i);
-        }
+        /*
+         * // Del 100 al 1: Escribe los números del 100 al 1.
+         * for (int i = 100; i > 0; i--) {
+         * System.out.println(i);
+         * }
+         */
 
     }
 }
