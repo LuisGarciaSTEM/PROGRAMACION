@@ -10,7 +10,7 @@ public class App {
     public static void main(String[] args) throws Exception {
         Scanner sc = new Scanner(System.in);
         ArrayList<String> arrayPalabras = new ArrayList<String>();
-        int pedirNum;
+        int pedirNum, pedirNum2;
         String pedirFrase, palabraSeparada, palabra;
         // Dígito: Solicita un dígito, si dato introducido no es un dígito, vuelve a
         // solicitar un dígito.
@@ -123,6 +123,21 @@ public class App {
          * }
          */
 
-         
+        /*
+         * // De X a Y: Solicita dos números y escribe los números comprendidos entre
+         * // ellos.
+         * System.out.println("Dime 2 números y escribo los números entre ellos.");
+         * pedirNum = sc.nextInt();
+         * pedirNum2 = sc.nextInt();
+         * 
+         * for (int i = pedirNum; i <= pedirNum2; i++) {
+         * System.out.println(i);
+         * }
+         */
+
+        // De X a Y de Z en Z: Solicita tres números, el primero va a indicar desde qué
+        // número vamos a contar, el segundo hasta qué número vamos a contar y el
+        // tercero de cuántos números en cuántos números vamos a ir saltando.
+
     }
 }
