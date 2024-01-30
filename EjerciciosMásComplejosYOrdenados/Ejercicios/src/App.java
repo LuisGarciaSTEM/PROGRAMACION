@@ -48,22 +48,47 @@ public class App {
          * System.out.println("Has construido la lista: " + arrayPalabras);
          */
 
-        // Eco con -: Solicita palabras por teclado y repitelas separando cada una de
-        // las letras con giones hasta que el usuario escriba SALIR.
+        /*
+         * // Eco con -: Solicita palabras por teclado y repitelas separando cada una de
+         * // las letras con giones hasta que el usuario escriba SALIR.
+         * 
+         * System.out.println("Introduce palabras hasta salir: ");
+         * palabra = sc.nextLine();
+         * 
+         * while (!palabra.toLowerCase().equals("salir")) {
+         * arrayPalabras.add(palabra);
+         * System.out.println("Introduce palabras hasta salir: ");
+         * System.out.println(arrayPalabras);
+         * for (String letra : arrayPalabras) {
+         * System.out.println(letra + "-");
+         * }
+         * palabra = sc.nextLine();
+         * }
+         * 
+         * System.out.println("Has construido la lista: " + arrayPalabras);
+         */
 
-        System.out.println("Introduce palabras hasta salir: ");
-        palabra = sc.nextLine();
-            
-        while (!palabra.toLowerCase().equals("salir")) {
-            arrayPalabras.add(palabra);
-            System.out.println("Introduce palabras hasta salir: ");
-            System.out.println(arrayPalabras);
-            for (String letra : arrayPalabras) {
-                System.out.println(letra + "-");
-            }
-            palabra = sc.nextLine();
+        /*
+         * // Eco 10 veces: Solicita una palabra y que el programa la repita 10 veces.
+         * 
+         * System.out.println("Dime una palabra/frase para repetirla 10 veces. ");
+         * pedirFrase = sc.nextLine();
+         * for (int i = 0; i < 10; i++) {
+         * System.out.println(pedirFrase);
+         * }
+         */
+
+        
+        // Eco X veces: Solicita una palabra y un número y que el programa repita la
+        // palabra ese número de veces.
+        System.out.println("Dime una palabra/frase.");
+        pedirFrase = sc.nextLine();
+        System.out.println("Ahora dime cuantas veces quieres que se repita eso: ");
+        pedirNum = sc.nextInt();
+
+        for (int i = 0; i < pedirNum; i++) {
+            System.out.println(pedirFrase);
         }
 
-        System.out.println("Has construido la lista: " + arrayPalabras);
     }
 }
