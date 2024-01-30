@@ -72,6 +72,33 @@ public class Libro {
     }
 
     /**
+     * Establece el Titulo del libro.
+     * 
+     * @param Titulo El núevo Titulo del libro.
+     */
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    /**
+     * Establece el autor del libro.
+     * 
+     * @param autor El núevo autor del libro.
+     */
+    public void setAuthor(String autor) {
+        this.autor = autor;
+    }
+
+    /**
+     * Establece el numPaginas del libro.
+     * 
+     * @param numPaginas El núevo numPaginas del libro.
+     */
+    public void setNumPaginas(int numPagina) {
+        this.numPagina = numPagina;
+    }
+
+    /**
      * Devolver la representación en formato cadena (String) del objeto Libro.
      * 
      * @return Una cadena que representar el objeto Libro.
@@ -91,5 +118,19 @@ public class Libro {
 
         System.out.println("Libro 1 ->" + libro1);
         System.out.println("Libro 2 ->" + libro2);
+
+        /**
+         * El número de páginas introducidas no puede ser menor que 0.
+         * Si al crear el objeto, se introduce un número de páginas negativas se cambia
+         * a 0.
+         * Si al cambiar el valor del número de paginas es negativa, se deja el que
+         * estaba.
+         * 
+         * Tanto el título como el author no pueden tener más de 20 caracteres.
+         * En caso de que tengan más el título se trunca y el author se pone las
+         * iniciales.
+         * 
+         */
+
     }
 }
