@@ -105,9 +105,11 @@ public class App {
          * }
          */
 
-        // Del 1 al 100 de 2 en 2: Escribe los números del 1 al 100 de dos en dos.
-        for (int i = 1; i <= 100; i += 2) {
-            System.out.println(i);
-        }
+        /*
+         * // Del 1 al 100 de 2 en 2: Escribe los números del 1 al 100 de dos en dos.
+         * for (int i = 1; i <= 100; i += 2) {
+         * System.out.println(i);
+         * }
+         */
     }
 }
