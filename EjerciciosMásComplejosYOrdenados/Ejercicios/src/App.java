@@ -10,7 +10,7 @@ public class App {
     public static void main(String[] args) throws Exception {
         Scanner sc = new Scanner(System.in);
         ArrayList<String> arrayPalabras = new ArrayList<String>();
-        int pedirNum, pedirNum2, pedirNum3;
+        int pedirNum, pedirNum2, pedirNum3, resultado;
         String pedirFrase, palabraSeparada, palabra;
         // Dígito: Solicita un dígito, si dato introducido no es un dígito, vuelve a
         // solicitar un dígito.
@@ -218,5 +218,24 @@ public class App {
          * lista += pedirFrase;
          * }
          */
+
+        /*
+         * // Tabla de multiplicar: Dado un número escribe su tabla de multiplicar del 1
+         * al
+         * // 10.
+         * 
+         * System.out.
+         * println("Dime un número para saber su tabla de multiplicar del 1 al 10: ");
+         * pedirNum = sc.nextInt();
+         * 
+         * for (int i = 0; i <= 10; i++) {
+         * resultado = pedirNum * i;
+         * System.out.println(pedirNum + " * " + i + " = " + resultado);
+         * }
+         */
+        
+        // Letras en palabra: Dadas una palabra y una letra, contar el número de veces
+        // que aparece la letra en la palabra.
+
     }
 }
