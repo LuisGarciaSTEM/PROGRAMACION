@@ -167,7 +167,7 @@ public class App {
          * }
          * }
          */
-        
+
         /*
          * // Numeros pares: Dado un número, escribe los números pares comprendidos
          * entre
@@ -184,7 +184,25 @@ public class App {
          * }
          * }
          */
-        // Palabra de símbolos: Dado un número y un símbolo, escribir el símbolo ese
-        // número de veces.
+
+        /*
+         * // Palabra de símbolos: Dado un número y un símbolo, escribir el símbolo ese
+         * // número de veces.
+         * 
+         * System.out.println("Escribe un símbolo: ");
+         * pedirFrase = sc.nextLine();
+         * System.out.
+         * println("Ahora escribe el número de veces que quieras que se imprima ese símbolo: "
+         * );
+         * pedirNum = sc.nextInt();
+         * 
+         * for (int i = 1; i <= pedirNum; i++) {
+         * System.out.println(pedirFrase);
+         * }
+         */
+
+        // Pirámide de símbolos: Dado un número y un símbolo, escribir la pirámide
+        // formada desde un símbolo hasta el número dado
+
     }
 }
