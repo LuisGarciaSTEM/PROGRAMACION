@@ -201,19 +201,22 @@ public class App {
          * }
          */
 
-        // Pirámide de símbolos: Dado un número y un símbolo, escribir la pirámide
-        // formada desde un símbolo hasta el número dado
-
-        System.out.println("Escribe un símbolo: ");
-        pedirFrase = sc.nextLine();
-        System.out.println("Ahora escribe el número de veces que quieras que se imprima ese símbolo en piramide: ");
-        pedirNum = sc.nextInt();
-        String lista = pedirFrase;
-
-        for (int i = 0; i < pedirNum; i++) {
-            System.out.println(lista);
-            lista += pedirFrase;
-        }
-
+        /*
+         * // Pirámide de símbolos: Dado un número y un símbolo, escribir la pirámide
+         * // formada desde un símbolo hasta el número dado
+         * 
+         * System.out.println("Escribe un símbolo: ");
+         * pedirFrase = sc.nextLine();
+         * System.out.
+         * println("Ahora escribe el número de veces que quieras que se imprima ese símbolo en piramide: "
+         * );
+         * pedirNum = sc.nextInt();
+         * String lista = pedirFrase;
+         * 
+         * for (int i = 0; i < pedirNum; i++) {
+         * System.out.println(lista);
+         * lista += pedirFrase;
+         * }
+         */
     }
 }
