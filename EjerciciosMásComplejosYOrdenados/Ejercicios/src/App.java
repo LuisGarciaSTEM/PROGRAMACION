@@ -167,6 +167,24 @@ public class App {
          * }
          * }
          */
-
+        
+        /*
+         * // Numeros pares: Dado un número, escribe los números pares comprendidos
+         * entre
+         * // el 1 y el.
+         * 
+         * System.out.
+         * println("Dime un número, y escribo los números pares comprendidos entre el 1 y él."
+         * );
+         * pedirNum = sc.nextInt();
+         * 
+         * for (int i = 1; i <= pedirNum; i++) {
+         * if (i % 2 == 0) {
+         * System.out.println(i);
+         * }
+         * }
+         */
+        // Palabra de símbolos: Dado un número y un símbolo, escribir el símbolo ese
+        // número de veces.
     }
 }
