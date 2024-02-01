@@ -133,7 +133,7 @@ public class Libro {
         System.out.println("Libro 1 ->" + libro1);
         System.out.println("Libro 2 ->" + libro2);
         System.out.println("Libro 3 ->" + libro3);
-
+        
         /**
          * El número de páginas introducidas no puede ser menor que 0.
          * Si al crear el objeto, se introduce un número de páginas negativas se cambia
