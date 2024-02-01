@@ -1,5 +1,3 @@
-import javax.security.auth.kerberos.KerberosCredMessage;
-
 public class Libro {
 
     private String titulo;
@@ -143,10 +141,10 @@ public class Libro {
          * Si al cambiar el valor del número de paginas es negativa, se deja el que
          * estaba.
          * 
-         * Tanto el título como el author no pueden tener más de 20 caracteres.
+         * Tanto el título como el autor no pueden tener más de 20 caracteres.
          * En caso de que tengan más el título se trunca y el author se pone las
          * iniciales.
-         * 
+         *  
          */
 
     }
