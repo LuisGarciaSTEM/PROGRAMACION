@@ -8,7 +8,7 @@ public class PersianaYVentana {
         this.bajar = bajar; 
     }
 
-
+    
     public static void main(String[] Args) {
 
 
