@@ -54,8 +54,40 @@ public interface EjerciciosListas {
         // Lista en código de tamaño n Crea una lista de N palabras directamente en el
         // código. Para saber el valor de N puede ser introducido por parámetros o
         // solicitado mediante Scanner por la terminal.
-
-        
-
+        /*
+         * if (args.length == 1) {
+         * ArrayList<String> listaPalabrasPorArgumento = new ArrayList<>();
+         * int n = Integer.parseInt(args[0]);
+         * 
+         * // Esto podría meterse en una función a la que le pases por parametro,
+         * (Scanner
+         * // sc, n, listaPalabras)
+         * 
+         * for (int i = 0; i < n; i++) {
+         * System.out.print("Ingresa la palabra #" + (i + 1) + ": ");
+         * String palabra = sc.next();
+         * listaPalabrasPorArgumento.add(palabra);
+         * }
+         * 
+         * System.out.println("Contenido de la lista: " + listaPalabrasPorArgumento);
+         * } else {
+         * 
+         * ArrayList<String> listaPalabrasPorParametro = new ArrayList<>();
+         * System.out.print("Dime el tamaño que quieres que contenga la lista: ");
+         * int preguntarTamañoN = sc.nextInt();
+         * 
+         * // Esto podría meterse en una función a la que le pases por parametro,
+         * (Scanner
+         * // sc, preguntarTamaño, listaPalabras)
+         * 
+         * for (int i = 0; i < preguntarTamañoN; i++) {
+         * System.out.print("Ingresa la palabra #" + (i + 1) + ": ");
+         * String palabra = sc.next();
+         * listaPalabrasPorParametro.add(palabra);
+         * }
+         * 
+         * System.out.println("Contenido de la lista: " + listaPalabrasPorParametro);
+         * }
+         */
     }
 }
