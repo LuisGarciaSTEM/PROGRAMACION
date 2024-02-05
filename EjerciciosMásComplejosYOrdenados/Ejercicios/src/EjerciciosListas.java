@@ -30,5 +30,32 @@ public interface EjerciciosListas {
          * 
          * System.out.println(lista5PalabrasPorConsola);
          */
+
+        // Lista con argumentos Crea una lista de 5 palabras, pasándolas como
+        // argumentos.
+        /*
+         * if (args.length == 5) {
+         * ArrayList<String> lista5PalabrasPorArgumento = new ArrayList<>();
+         * 
+         * for (int i = 0; i < args.length; i++) {
+         * System.out.println((i + 1) + ": " + args[i]);
+         * lista5PalabrasPorArgumento.add(args[i]);
+         * }
+         * 
+         * System.out.println("Contenido de la lista: " + lista5PalabrasPorArgumento);
+         * } else {
+         * System.out.
+         * println("La cantidad de argumentos introducida no es valida. SON 5.");
+         * }
+         * 
+         * // System.out.println("Número real de argumentos: " + args.length);
+         */
+
+        // Lista en código de tamaño n Crea una lista de N palabras directamente en el
+        // código. Para saber el valor de N puede ser introducido por parámetros o
+        // solicitado mediante Scanner por la terminal.
+
+        
+
     }
 }
