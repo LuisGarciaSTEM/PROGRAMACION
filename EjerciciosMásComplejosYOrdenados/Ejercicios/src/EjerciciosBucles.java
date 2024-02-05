@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class App {
+public class EjerciciosBucles {
 
     public static boolean esDigito(int num) {
         return (num >= -2147483647 && num <= 2147483647);
