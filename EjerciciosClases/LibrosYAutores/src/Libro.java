@@ -1,9 +1,14 @@
 public class Libro {
 
+    // Atributos de instancia. Cada uno de los objetos de la clase
     private String titulo;
     private String autor;
     private final int ISBN; // Una vez que se le da un valor no puede cambiar (final)
     private int numPagina;
+
+    // Atributos de clase -> Es propio de la clase y no de cada uno de los objetos
+    // que la componen.
+    private static int numMaximoLetras = 20;
 
     /**
      * Constructor con parámetros.
@@ -13,7 +18,7 @@ public class Libro {
      * @param ISBN   El ISBM del libro.
      */
     public Libro(String titulo, int ISBN) {
-        this.titulo = titulo;
+        this.setTitulo(titulo);
         this.autor = "(por defecto)";
         this.ISBN = ISBN;
         this.numPagina = 0;
@@ -32,6 +37,7 @@ public class Libro {
         this.setTitulo(titulo);
         this.setAutor(autor);
         this.ISBN = ISBN;
+        this.numPagina = 0;
         this.setNumPaginas(numPagina);
     }
 
@@ -77,8 +83,9 @@ public class Libro {
      * @param Titulo El núevo Titulo del libro.
      */
     public void setTitulo(String titulo) {
-        if (titulo.length() > 20) {
-            this.titulo = titulo.substring(0, 20);
+        this.titulo = titulo;
+        if (titulo.length() > this.numMaximoLetras) {
+            this.titulo = titulo.substring(0, this.numMaximoLetras);
         } else {
             this.titulo = titulo;
         }
@@ -90,10 +97,14 @@ public class Libro {
      * @param autor El núevo autor del libro.
      */
     public void setAutor(String autor) {
-        if (autor.length() > 20) {
-            this.autor = autor.substring(0, 20);
-        } else {
-            this.autor = autor;
+        
+        if (autor.length() > this.numMaximoLetras) {
+            
+            this.autor = " ";
+            String[] autorPorPalabras = autor.split(" ");
+            for (int i = 0; i < autorPorPalabras.length; i++) {
+                this.autor += autorPorPalabras[i].charAt(0);
+            }
         }
     }
 
@@ -103,11 +114,8 @@ public class Libro {
      * @param numPaginas El núevo numPaginas del libro.
      */
     public void setNumPaginas(int numPagina) {
-        if (numPagina < 0) {
-            this.numPagina = 0;
-        } else {
+        if (numPagina > 0)
             this.numPagina = numPagina;
-        }
     }
 
     /**
@@ -133,7 +141,7 @@ public class Libro {
         System.out.println("Libro 1 ->" + libro1);
         System.out.println("Libro 2 ->" + libro2);
         System.out.println("Libro 3 ->" + libro3);
-        
+
         /**
          * El número de páginas introducidas no puede ser menor que 0.
          * Si al crear el objeto, se introduce un número de páginas negativas se cambia
@@ -144,7 +152,7 @@ public class Libro {
          * Tanto el título como el autor no pueden tener más de 20 caracteres.
          * En caso de que tengan más el título se trunca y el author se pone las
          * iniciales.
-         *  
+         * 
          */
 
     }
