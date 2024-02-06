@@ -39,8 +39,19 @@ public class Persiana {
             this.tamanio = tamanio;
     }
 
-    public void setEstaSubida(boolean estaSubida) {
+    // Podemos hacer privado el set, porque tenemos los métodos subir() y bajar()
+    // realizar su función.
+    private void setEstaSubida(boolean estaSubida) {
         this.estaSubida = estaSubida;
+    }
+
+    public void subir() {
+        // this.estaSubida = true pero si hay alguna comprobación en el set, no la hace.
+        this.setEstaSubida(true);
+    }
+
+    public void bajar(){
+        this.setEstaSubida(false);
     }
 
     public static void main(String[] args) throws Exception {
