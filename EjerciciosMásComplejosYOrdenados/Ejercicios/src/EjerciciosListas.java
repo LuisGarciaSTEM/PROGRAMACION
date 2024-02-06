@@ -89,5 +89,13 @@ public interface EjerciciosListas {
          * System.out.println("Contenido de la lista: " + listaPalabrasPorParametro);
          * }
          */
+
+        // Lista en código de tamaño n con argumentos Crea una lista a partir de una
+        // serie de argumentos: El primer argumento debe ser el número de elementos que
+        // va a tener la lista. Los siguientes argumentos serán las palabras a
+        // introducir en la lista. Recuerda comprobar que el número de argumentos es el
+        // adecuado.
+
+        
     }
 }
