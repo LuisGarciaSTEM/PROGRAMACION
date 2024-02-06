@@ -16,13 +16,31 @@ public class Persiana {
     }
 
     public Persiana(double tamanio, boolean estaSubida) {
-        this.tamanio = tamanio;
+        this.tamanio = 0;
+        this.setTaminio(tamanio);
         this.estaSubida = estaSubida;
     }
 
     public Persiana(Persiana p) {
         this.tamanio = p.tamanio;
         this.estaSubida = p.estaSubida;
+    }
+
+    public double getTaminio() {
+        return this.tamanio;
+    }
+
+    public boolean getEstaSubida() {
+        return this.estaSubida;
+    }
+
+    public void setTaminio(double tamanio) {
+        if (tamanio > 0)
+            this.tamanio = tamanio;
+    }
+
+    public void setEstaSubida(boolean estaSubida) {
+        this.estaSubida = estaSubida;
     }
 
     public static void main(String[] args) throws Exception {
