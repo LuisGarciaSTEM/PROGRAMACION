@@ -54,6 +54,16 @@ public class Persiana {
         this.setEstaSubida(false);
     }
 
+    public String toString(){
+        String salida = "La salida está: ";
+        if (this.estaSubida) {
+            salida += "subida.";
+        } else {
+            salida = "bajada";
+        }
+        return salida;
+    }
+
     public static void main(String[] args) throws Exception {
         System.out.println("Hello, World!");
     }
