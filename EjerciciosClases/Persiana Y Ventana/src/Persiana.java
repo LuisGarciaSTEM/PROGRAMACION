@@ -50,21 +50,33 @@ public class Persiana {
         this.setEstaSubida(true);
     }
 
-    public void bajar(){
+    public void bajar() {
         this.setEstaSubida(false);
     }
 
-    public String toString(){
+    public String toString() {
         String salida = "La salida está: ";
         if (this.estaSubida) {
             salida += "subida.";
         } else {
-            salida = "bajada";
+            salida += "bajada";
         }
         return salida;
     }
 
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
+        Persiana persiana1 = new Persiana();
+        Persiana persiana2 = new Persiana(1.34, true);
+        Persiana persiana3 = new Persiana(persiana2);
+
+        System.out.println("La persiana 1 - " + persiana1);
+        System.out.println("La persiana 2 - " + persiana2);
+        System.out.println("La persiana 3 - " + persiana3);
+
+        persiana3.bajar();
+        System.out.println("Bajamos la persiana - " + persiana3);
+        persiana3.subir();
+        System.out.println("Subimos la persiana - " + persiana3);
+
     }
 }
