@@ -40,7 +40,7 @@ public class Ventana {
         this.tamanio = p.tamanio;
         this.transparencia = p.transparencia;
         this.estaAbierta = p.estaAbierta;
-        this.persiana = p.persiana.clone();
+        this.persiana = p.persiana;
     }
 
     public double getTaminio() {
