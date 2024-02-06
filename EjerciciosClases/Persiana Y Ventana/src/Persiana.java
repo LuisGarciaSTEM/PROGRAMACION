@@ -15,6 +15,12 @@ public class Persiana {
         this.estaSubida = false;
     }
 
+    public Persiana(double tamanio) {
+        this.tamanio = 0;
+        this.setTaminio(tamanio);
+        this.estaSubida = false;
+    }
+
     public Persiana(double tamanio, boolean estaSubida) {
         this.tamanio = 0;
         this.setTaminio(tamanio);
