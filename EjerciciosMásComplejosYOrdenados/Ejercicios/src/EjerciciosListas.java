@@ -96,6 +96,22 @@ public interface EjerciciosListas {
         // introducir en la lista. Recuerda comprobar que el número de argumentos es el
         // adecuado.
 
-        
+        if (args.length < 2) {
+            System.out.println(
+                    "El número de argumentos introducido no es valido. Tienes que introducir, un número y mínimo una palabra");
+        } else {
+            ArrayList<String> listaPalabrasPorArgumento = new ArrayList<>();
+            int n = Integer.parseInt(args[0]);
+
+            if (args.length < n) {
+                System.out.println("No hay suficientes palabras para llenar la lista según el número proporcionado.");
+            } else {
+                for (int i = 1; i <= n; i++) {
+                    listaPalabrasPorArgumento.add(args[i]);
+                }
+            }
+            System.out.println("Contenido de la lista: " + listaPalabrasPorArgumento);
+        }
     }
+
 }
