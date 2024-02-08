@@ -118,14 +118,17 @@ public interface EjerciciosListas {
          */
 
         // **Lista hasta 20** Crea una lista que contenga los números del 0 al 19.
+        /*
+         * ArrayList<Integer> lista20Numeros = new ArrayList<Integer>();
+         * 
+         * for (int i = 0; i < 20; i++) {
+         * lista20Numeros.add(i);
+         * 
+         * }
+         * 
+         * System.out.println(lista20Numeros);
+         */
 
-        ArrayList<Integer> lista20Numeros = new ArrayList<Integer>();
-
-        for (int i = 0; i < 20; i++) {
-            lista20Numeros.add(i);
-
-        }
-        System.out.println(lista20Numeros);
     }
 
 }
