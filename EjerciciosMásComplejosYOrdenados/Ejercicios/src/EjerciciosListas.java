@@ -95,23 +95,37 @@ public interface EjerciciosListas {
         // va a tener la lista. Los siguientes argumentos serán las palabras a
         // introducir en la lista. Recuerda comprobar que el número de argumentos es el
         // adecuado.
+        /*
+         * if (args.length < 2) {
+         * System.out.println(
+         * "El número de argumentos introducido no es valido. Tienes que introducir, un número y mínimo una palabra"
+         * );
+         * } else {
+         * ArrayList<String> listaPalabrasPorArgumento = new ArrayList<>();
+         * int n = Integer.parseInt(args[0]);
+         * 
+         * if (args.length < n) {
+         * System.out.
+         * println("No hay suficientes palabras para llenar la lista según el número proporcionado."
+         * );
+         * } else {
+         * for (int i = 1; i <= n; i++) {
+         * listaPalabrasPorArgumento.add(args[i]);
+         * }
+         * }
+         * System.out.println("Contenido de la lista: " + listaPalabrasPorArgumento);
+         * }
+         */
 
-        if (args.length < 2) {
-            System.out.println(
-                    "El número de argumentos introducido no es valido. Tienes que introducir, un número y mínimo una palabra");
-        } else {
-            ArrayList<String> listaPalabrasPorArgumento = new ArrayList<>();
-            int n = Integer.parseInt(args[0]);
+        // **Lista hasta 20** Crea una lista que contenga los números del 0 al 19.
 
-            if (args.length < n) {
-                System.out.println("No hay suficientes palabras para llenar la lista según el número proporcionado.");
-            } else {
-                for (int i = 1; i <= n; i++) {
-                    listaPalabrasPorArgumento.add(args[i]);
-                }
-            }
-            System.out.println("Contenido de la lista: " + listaPalabrasPorArgumento);
+        ArrayList<Integer> lista20Numeros = new ArrayList<Integer>();
+
+        for (int i = 0; i < 20; i++) {
+            lista20Numeros.add(i);
+
         }
+        System.out.println(lista20Numeros);
     }
 
 }
