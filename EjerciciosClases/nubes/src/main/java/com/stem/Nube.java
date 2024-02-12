@@ -2,12 +2,22 @@ package com.stem;
 
 public class Nube {
 
+    // Clase chiquitas que se usan dentro de nube.
+    public enum TiposDeNubes {
+        CIRROS,
+        CUMULAS,
+        ESTRATOS,
+        NIMBOS
+    }
+
+    private TiposDeNubes tipo;
     private double altura;
-    private double tamanio;
+    private double tamanio; // cm3
 
     public Nube() {
-        this.altura = altura;
-        this.tamanio = tamanio;
+        this.tipo = TiposDeNubes.CIRROS;
+        this.altura = 3000;
+        this.tamanio = 1000;
     }
 
     public Nube(double altura, double tamanio) {
