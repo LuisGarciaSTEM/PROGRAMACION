@@ -20,12 +20,14 @@ public class Nube {
         this.tamanio = 1000;
     }
 
-    public Nube(double altura, double tamanio) {
+    public Nube(TiposDeNubes tipo, double altura, double tamanio) {
+        this.tipo = tipo;
         this.altura = altura;
         this.tamanio = tamanio;
     }
 
     public Nube(Nube n) {
+        this.tipo = n.tipo;
         this.altura = n.altura;
         this.tamanio = n.tamanio;
     }
