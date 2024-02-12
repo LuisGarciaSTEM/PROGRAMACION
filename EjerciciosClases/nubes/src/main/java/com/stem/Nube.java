@@ -63,7 +63,6 @@ public class Nube {
 
     }
 
-    @Override
     public String toString() {
         return "Altura: " + this.altura + " tamaño: " + this.tamanio;
     }
