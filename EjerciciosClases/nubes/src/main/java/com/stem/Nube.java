@@ -53,13 +53,26 @@ public class Nube {
     public void setTamanio(double tamanio) {
         this.tamanio = tamanio;
     }
-
-    public static void unirNube(Nube nube1, Nube nube2) {
+    /* 
+    public void unirNube(Nube nube1, Nube nube2) {
         // Una nube que llega nueva une a this.nube si estan a la misma altura.
         if (nube1.altura == nube2.altura) {
             nube1.tamanio += nube2.tamanio;
             nube2.tamanio = 0;
         }
+
+    }
+    */
+    public double unirNube(Nube n) {
+        // Una nube que llega nueva une a this.nube si estan a la misma altura.
+        double salir = -1;
+        if (this.altura == n.altura) {
+            this.tamanio += n.tamanio;
+            n.altura = 0;
+            n.tamanio = 0;
+            salir = this.tamanio;
+        }
+        return salir;
 
     }
 
@@ -84,7 +97,7 @@ public class Nube {
 
         System.out.println(nube1);
         System.out.println(nube2);
-        unirNube(nube1, nube2);
+        // unirNube(nube1, nube2);
         System.out.println(nube1);
         System.out.println(nube2);
 
