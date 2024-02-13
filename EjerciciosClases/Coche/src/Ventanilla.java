@@ -4,11 +4,8 @@ public class Ventanilla {
     private boolean estado; // Subida o bajada.
 
     public Ventanilla() {
-        this.transparencia = transparencia;
         this.transparencia = true;
-        this.tamanio = tamanio;
         this.tamanio = 15;
-        this.estado = estado;
         this.estado = true;
     }
 
@@ -48,7 +45,12 @@ public class Ventanilla {
         this.estado = estado;
     }
 
-    public static void main(String[] args) {
 
+    public String toString() {
+        return super.toString();
+    }
+
+    public static void main(String[] args) {
+        
     }
 }
