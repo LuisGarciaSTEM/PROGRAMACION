@@ -12,7 +12,7 @@ public class Nube {
         NIMBOS;
 
         public static String mostrar() {
-            return " [CIRROS, CUMULOS, ESTRATOS, NIMBOS]";
+            return "[CIRROS, CUMULOS, ESTRATOS, NIMBOS]";
         }
     }
 
@@ -53,16 +53,17 @@ public class Nube {
     public void setTamanio(double tamanio) {
         this.tamanio = tamanio;
     }
-    /* 
-    public void unirNube(Nube nube1, Nube nube2) {
-        // Una nube que llega nueva une a this.nube si estan a la misma altura.
-        if (nube1.altura == nube2.altura) {
-            nube1.tamanio += nube2.tamanio;
-            nube2.tamanio = 0;
-        }
 
-    }
-    */
+    /*
+     * public void unirNube(Nube nube1, Nube nube2) {
+     * // Una nube que llega nueva une a this.nube si estan a la misma altura.
+     * if (nube1.altura == nube2.altura) {
+     * nube1.tamanio += nube2.tamanio;
+     * nube2.tamanio = 0;
+     * }
+     * 
+     * }
+     */
     public double unirNube(Nube n) {
         // Una nube que llega nueva une a this.nube si estan a la misma altura.
         double salir = -1;
@@ -75,6 +76,26 @@ public class Nube {
         return salir;
 
     }
+
+    /*
+     * Aumenta el tamaño de la nube en un 50%.
+     */
+
+    public double crecer() {
+        /*  this.tamanio *= 1.5; // tamanio = tamanio + 0.5
+        double salir = -1;
+        double mitad = tamanio / 2;
+        this.tamanio += mitad;
+        salir = this.tamanio;
+        */
+        this.tamanio += 1.5;
+
+        return this.tamanio;
+    }
+
+    /*
+     * La nube sube los metros indicados.
+     */
 
     public String toString() {
         return "Altura: " + this.altura + " tamaño: " + this.tamanio;
