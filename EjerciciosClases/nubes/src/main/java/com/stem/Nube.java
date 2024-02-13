@@ -82,12 +82,13 @@ public class Nube {
      */
 
     public double crecer() {
-        /*  this.tamanio *= 1.5; // tamanio = tamanio + 0.5
-        double salir = -1;
-        double mitad = tamanio / 2;
-        this.tamanio += mitad;
-        salir = this.tamanio;
-        */
+        /*
+         * this.tamanio *= 1.5; // tamanio = tamanio + 0.5
+         * double salir = -1;
+         * double mitad = tamanio / 2;
+         * this.tamanio += mitad;
+         * salir = this.tamanio;
+         */
         this.tamanio += 1.5;
 
         return this.tamanio;
@@ -95,7 +96,17 @@ public class Nube {
 
     /*
      * La nube sube los metros indicados.
+     * 
+     * @param metros indica el número de metros que sube la nube.
      */
+
+    public double subir(double metros) {
+        if (metros > 0) {
+            this.altura += metros;
+
+        }
+        return this.altura;
+    }
 
     public String toString() {
         return "Altura: " + this.altura + " tamaño: " + this.tamanio;
