@@ -18,11 +18,10 @@ public class NubeTest {
     }
 
     @Test
-    public void crecer() {
-        Nube nube1 = new Nube(TiposDeNubes.NIMBOS, 10, 30);
-
+    public void testCrecer(){
+        Nube nube1 = new Nube(TiposDeNubes.NIMBOS,10,30);
         assertEquals(45, nube1.crecer());
-
+        // Modifico el tamanio de la nube para probar con otros tamanios.
         nube1.setTamanio(60);
         assertEquals(90, nube1.crecer());
         nube1.setTamanio(123);
@@ -40,6 +39,19 @@ public class NubeTest {
         assertEquals(97.7, nube1.subir(32.7));
         assertEquals(97.7, nube1.subir(-65));
 
+    }
+
+    @Test 
+    public void testBajar(){
+        Nube nube1 = new Nube(TiposDeNubes.NIMBOS,200,30);
+        assertEquals(145, nube1.bajar(55));
+        // nube1 tiene altura 145
+        assertEquals(112.3, nube1.bajar(32.7));
+        // Como no puede bajar un valor negativo, se queda como está.
+        assertEquals(112.3, nube1.bajar(-65));
+        // Comprobamos que no baja de 0.
+        assertEquals(0, nube1.bajar(200));
+        
     }
 
 }

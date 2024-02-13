@@ -108,6 +108,13 @@ public class Nube {
         return this.altura;
     }
 
+    public double bajar(double metros){
+        if (metros > 0 ) this.altura -= metros;
+        if (this.altura < 0) this.altura = 0;
+        // Para las pruebas necesitamos un return:
+        return this.altura;
+     }
+
     public String toString() {
         return "Altura: " + this.altura + " tamaño: " + this.tamanio;
     }
