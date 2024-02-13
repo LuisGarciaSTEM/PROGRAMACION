@@ -108,12 +108,34 @@ public class Nube {
         return this.altura;
     }
 
-    public double bajar(double metros){
-        if (metros > 0 ) this.altura -= metros;
-        if (this.altura < 0) this.altura = 0;
+    public double bajar(double metros) {
+        if (metros > 0)
+            this.altura -= metros;
+        if (this.altura < 0)
+            this.altura = 0;
         // Para las pruebas necesitamos un return:
         return this.altura;
-     }
+    }
+
+    /**
+     * ¿Puede llover? Puede llover si la altura de la nube es mayor que
+     * 1000 y su tamanio es mayor de 200.
+     */
+
+    // public boolean puedeLlover(){
+    //    if (this.altura > ) {
+            
+   //     }
+        
+        
+        
+  //      return true;
+  //  }
+    /**
+     * Llueve si puede llover.
+     * El volumen se reduce a un tercio del tamaño de la nube inicial.
+     * 
+     */
 
     public String toString() {
         return "Altura: " + this.altura + " tamaño: " + this.tamanio;
