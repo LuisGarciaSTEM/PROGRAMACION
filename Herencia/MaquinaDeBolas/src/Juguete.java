@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Juguete {
 
     private String nombre;
@@ -30,12 +32,26 @@ public class Juguete {
         this.precio = precio;
     }
 
+    public static double generarPrecioJuguete() {
+        double precioMinimo = 0.20;
+        double precioMaximo = 2.00;
+        Random rand = new Random();
+
+        double precioGenerado = precioMinimo + (precioMaximo - precioMinimo)
+                * rand.nextDouble();
+        return precioGenerado;
+
+    }
+
     @Override
     public String toString() {
         return super.toString();
     }
 
     public static void main(String[] args) {
+
+        System.out.println("El precio generado es: " + String.format("%.2f",
+                generarPrecioJuguete()));
 
     }
 
