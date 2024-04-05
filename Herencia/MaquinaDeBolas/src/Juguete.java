@@ -45,7 +45,7 @@ public class Juguete {
 
     @Override
     public String toString() {
-        return super.toString();
+        return this.nombre + " -> " + this.precio + '€';
     }
 
     public static void main(String[] args) {

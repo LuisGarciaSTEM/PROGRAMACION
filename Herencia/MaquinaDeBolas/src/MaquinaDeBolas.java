@@ -12,7 +12,7 @@ public class MaquinaDeBolas {
     }
 
     public MaquinaDeBolas(double precioDeLaBola, ArrayList<Juguete> Juguetes) {
-        super();
+        this();
         setPrecioDeLaBola(precioDeLaBola);
         setJuguetes(Juguetes);
     }
@@ -32,10 +32,7 @@ public class MaquinaDeBolas {
     public void setPrecioDeLaBola(double precioDeLaBola) {
         if (precioDeLaBola % 0.50 == 0) {
             this.precioDeLaBola = precioDeLaBola;
-        } else {
-            System.out.println("Tiene que ser múltiplo de 0.50");
-        }
-
+        } 
     }
 
     public Juguete obtenerJugueteAleatorio(ArrayList<Juguete> listaJuguetes) {
