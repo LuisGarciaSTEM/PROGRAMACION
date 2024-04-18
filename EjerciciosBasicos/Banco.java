@@ -4,15 +4,30 @@ public class Banco {
 
     private static double saldo = 1000.0;
 
-    private static void imprimirMenu() {
-        System.out.println("1. Ingresar dinero.");
-        System.out.println("2. Retirar dinero.");
-        System.out.println("3. Mostrar dinero actual.");
-        System.out.println("4. Salir.");
+    static Scanner sc = new Scanner(System.in);
+
+    private static String input() {
+        return sc.nextLine();
+    }
+
+    private static int imprimirMenu() {
+        while (true) {
+            try {
+                System.out.println("\nIntroduce qué operación quieres realizar:");
+                System.out.println("1. Sumar.");
+                System.out.println("2. Restar.");
+                System.out.println("3. Multiplicar.");
+                System.out.println("4. Dividir.");
+                System.out.println("5. Salir.");
+                return Integer.parseInt(input());
+            } catch (Exception e) {
+                System.out.println("\nERROR: Has introducido un número mal. Inténtalo de nuevo.");
+            }
+        }
+
     }
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
         System.out.println("Tu saldo es: " + saldo);
         boolean salir = false;
         double dineroIngresado;
