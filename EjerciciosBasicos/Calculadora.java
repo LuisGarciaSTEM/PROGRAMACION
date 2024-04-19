@@ -4,7 +4,7 @@ public class Calculadora {
 
     static Scanner sc = new Scanner(System.in);
 
-    private static String input() {
+    private static String  input() {
         return sc.nextLine();
     }
 
@@ -30,7 +30,7 @@ public class Calculadora {
                 System.out.println("4. Dividir.");
                 System.out.println("5. Salir.");
                 return Integer.parseInt(input());
-            } catch (Exception e) {
+            } catch (NumberFormatException e) {
                 System.out.println("\nERROR: Has introducido un número mal. Inténtalo de nuevo.");
             }
         }
