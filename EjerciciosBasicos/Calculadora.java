@@ -2,9 +2,8 @@ import java.util.Scanner;
 
 public class Calculadora {
 
-    static Scanner sc = new Scanner(System.in);
-
     private static String  input() {
+        Scanner sc = new Scanner(System.in);
         return sc.nextLine();
     }
 
