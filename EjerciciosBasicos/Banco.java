@@ -2,74 +2,91 @@ import java.util.Scanner;
 
 public class Banco {
 
-    private static double saldo = 1000.0;
-
-    static Scanner sc = new Scanner(System.in);
-
     private static String input() {
+        Scanner sc = new Scanner(System.in);
         return sc.nextLine();
     }
 
     private static int imprimirMenu() {
         while (true) {
             try {
-                System.out.println("\nIntroduce qué operación quieres realizar:");
-                System.out.println("1. Sumar.");
-                System.out.println("2. Restar.");
-                System.out.println("3. Multiplicar.");
-                System.out.println("4. Dividir.");
-                System.out.println("5. Salir.");
+                System.out.println("\nIntroduce EL NÚMERO de la operación que quieres realizar:");
+                System.out.println("1. Ingresar.");
+                System.out.println("2. Sacar.");
+                System.out.println("3. Ver movimientos.");
+                System.out.println("4. Salir.");
                 return Integer.parseInt(input());
-            } catch (Exception e) {
-                System.out.println("\nERROR: Has introducido un número mal. Inténtalo de nuevo.");
+            } catch (NumberFormatException nfe) {
+                System.out.println("\nERROR: Has introducido mal el número del menú. Inténtalo de nuevo.");
             }
         }
 
     }
 
-    public static void main(String[] args) {
-        System.out.println("Tu saldo es: " + saldo);
-        boolean salir = false;
+    private static double ingresar(double saldo) {
         double dineroIngresado;
+        boolean salir = false;
+        while (!salir) {
+            try {
+                System.out.println("\n¿Cuánto dinero deseas ingresar?");
+                dineroIngresado = Double.parseDouble(input());
+                saldo += dineroIngresado;
+                salir = true;
+            } catch (NumberFormatException nfe) {
+                System.out.println(
+                        "\nERROR: Has introducido mal la cantidad a ingresar. Inténtalo de nuevo.");
+            }
+        }
+        return saldo;
+    }
+
+    public static double retirar(double saldo) {
+        double dineroRetirar;
+        boolean salir = false;
+        while (!salir) {
+            try {
+                System.out.println("\n¿Cuánto dinero deseas retirar?");
+                dineroRetirar = Double.parseDouble(input());
+                if (dineroRetirar > saldo) {
+                    System.out.println("Saldo insuficiente.");
+                    System.out.println(
+                            "No puedes retirar -> " + dineroRetirar + " cuando tienes -> " + saldo);
+                } else {
+                    saldo -= dineroRetirar;
+                }
+            } catch (NumberFormatException nfe) {
+                System.out.println(
+                        "\nERROR: Has introducido mal la cantidad a ingresar. Inténtalo de nuevo.");
+
+            }
+        }
+        return saldo;
+    }
+
+    public static void main(String[] args) {
+        double saldo = 1000.0;
+        boolean salir = false;
 
         while (!salir) {
-            imprimirMenu();
-            int opcion = 0;
-            try {
-                System.out.println("¿Qué quieres hacer con tu dinero: ?");
-                opcion = sc.nextInt();
-            } catch (Exception e) {
-                System.out.println("Error: Debes introducir un número.");
-                sc.nextLine(); // Limpiar el buffer de entrada
-            }
 
-            switch (opcion) {
-                case 1:
-                    System.out.println("¿Cuánto dinero deseas ingresar?");
-                    dineroIngresado = sc.nextDouble();
-                    saldo += dineroIngresado;
-                    break;
-                case 2:
-                    System.out.println("¿Cuánto dinero deseas retirar?");
-                    double dineroRetirar = sc.nextDouble();
-                    if (dineroRetirar > saldo) {
-                        System.out.println("Saldo insuficiente.");
-                    } else {
-                        saldo -= dineroRetirar;
-                    }
-                    break;
-                case 3:
-                    System.out.println("Tu saldo actual es: " + saldo);
-                    break;
-                case 4:
+            System.out.println("\nTu saldo actual es -> " + saldo);
+
+            switch (imprimirMenu()) {
+                case 1 -> ingresar(saldo);
+
+                case 2 -> retirar(saldo);
+
+                case 3 -> System.out.println("Tu saldo actual es: " + saldo);
+
+                case 4 -> {
                     System.out.println("Saliendo del programa.");
+                    System.out.println("Que pase un hemoso día");
                     salir = true;
-                    break;
-                default:
-                    System.out.println("Has introducido una opción inválida.");
+                }
+
+                default -> System.out.println("Has introducido una opción inválida.");
             }
 
         }
     }
 }
-
