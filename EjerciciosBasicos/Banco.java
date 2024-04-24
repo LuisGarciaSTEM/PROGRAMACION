@@ -52,6 +52,7 @@ public class Banco {
                     System.out.println(
                             "No puedes retirar -> " + dineroRetirar + " cuando tienes -> " + saldo);
                 } else {
+                    salir = true;
                     saldo -= dineroRetirar;
                 }
             } catch (NumberFormatException nfe) {
