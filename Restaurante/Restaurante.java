@@ -1,5 +1,3 @@
-package Restaurante;
-
 import java.time.LocalDate;
 import java.util.ArrayList;
 
@@ -16,7 +14,7 @@ public class Restaurante {
         this.listaReservas = new ArrayList<Reserva>();
     }
 
-    public final ArrayList<Reserva> getListaReservas() {
+    public ArrayList<Reserva> getListaReservas() {
         return this.listaReservas;
     }
 
@@ -41,7 +39,7 @@ public class Restaurante {
     public boolean resevar(String nombre, LocalDate fecha, int numComensales) {
         boolean disponible = comprobarDisponibilidad(fecha, numComensales);
         if (disponible) {
-            reserva r = new Reserva(nombre, fecha, numComensales);
+            Reserva r = new Reserva(nombre,numComensales , fecha);
             this.listaReservas.add(r);
         }
         return disponible;
@@ -50,7 +48,7 @@ public class Restaurante {
     @Override
     public String toString() {
         return "El restaurante " + this.nombre + " con aforo de " + this.aforo + " personas "
-                + " lleva " + this.listaReservas.size() + " reservas hechas";
+                + "lleva " + this.listaReservas.size() + " reservas hechas";
     }
 
 }
